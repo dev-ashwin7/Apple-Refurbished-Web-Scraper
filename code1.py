@@ -74,6 +74,7 @@ def get_money_saved(all_element_list):
 	  for j in i:
 	    if('span class="as-producttile-savingsprice"' in str(j)):
 	      text = remove_escape_characters(j.text)
+	      text = text.replace("Save ", "")
 	      saved_prices.append(text)
 	return saved_prices	
 
@@ -104,6 +105,7 @@ def check_if_in_stock(search, link, repeat):
 		if(repeat == True):
 			result = 1
 			return
+		print()
 		print("Your desired product is not available or does not exist - please ensure that the product you entered is in the product type you have selected and that the name is typed correctly")
 		for i in range(len(OPTIONS_NOT_FOUND)):
 			print(str(i + 1) + ". " + OPTIONS_NOT_FOUND[i])
@@ -119,6 +121,8 @@ def check_if_in_stock(search, link, repeat):
 
 def check_result(search, link, repeat):
 	if(result == 1):
+		print()
+		print("Waiting for product to come back in stock")
 		while(True):
 			repeat = True
 			check_if_in_stock(search, link, repeat)
