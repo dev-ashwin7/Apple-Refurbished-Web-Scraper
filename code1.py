@@ -3,7 +3,8 @@ import requests
 import time
 import re
 
-
+#currently you have to enter the type of product(mac, ipad, etc) in any case but in the same exact way in the options or enter the number for the option
+#for the product itself you have to have the exact product name as given on the apple refurbished website itself or the product will appear as unavailabvle
 
 
 SPECIAL_CHARACTERS = ["\r", "\n", "\t", "\xa0"]
