@@ -122,7 +122,7 @@ def check_if_in_stock(search, link, repeat):
 def check_result(search, link, repeat):
 	if(result == 1):
 		print()
-		print("Waiting for product to come back in stock")
+		print("Waiting for product to come back in stock(leave the code running)")
 		while(True):
 			repeat = True
 			check_if_in_stock(search, link, repeat)
