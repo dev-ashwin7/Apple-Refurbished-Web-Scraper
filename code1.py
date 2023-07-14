@@ -154,7 +154,6 @@ def main():
 		product_types = get_product_types(soup)
 		product_types_for_link = get_product_types_for_link(product_types)
 		product_types.append("Quit")
-		print(product_types)
 
 		print()
 		print()
